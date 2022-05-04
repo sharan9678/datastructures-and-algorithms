@@ -2,8 +2,11 @@ package com.sharan.dsa.recursion;
 
 public class Fibonacci {
     public static void main(String[] args) {
-        int ans = fibonacci(4);
-        System.out.println(ans);
+//        int ans = fibonacci(4);
+//        System.out.println(ans);
+        for (int i = 0; i < 11; i++) {
+            System.out.println(fiboFormula(i));
+        }
     }
 
     static int fibonacci(int number) {
@@ -14,7 +17,7 @@ public class Fibonacci {
         return fibonacci(number - 2) + fibonacci(number - 1);
     }
 
-    static void multiply(int num1, int num2) {
-
+    static int fiboFormula(int n) {
+        return (int) ((Math.pow(((1+Math.sqrt(5))/2),n)-Math.pow(((1-Math.sqrt(5))/2),n))/Math.sqrt(5));
     }
 }
