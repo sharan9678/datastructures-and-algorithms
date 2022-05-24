@@ -6,7 +6,7 @@ public class Unique {
         System.out.println(ans(arr));
     }
 
-    private static int ans(int[] arr) {
+    public static int ans(int[] arr) {
         int unique = 0;
         for (int n : arr) {
             unique ^= n;

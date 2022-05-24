@@ -6,7 +6,7 @@ public class OddEven {
         System.out.println(isOdd(n));
     }
 
-    private static boolean isOdd(int n) {
+    public static boolean isOdd(int n) {
         return (n & 1) == 1;
     }
 }
