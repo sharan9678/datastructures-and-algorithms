@@ -7,7 +7,6 @@ public class BinarySearchSQRT {
 
         System.out.printf("%.3f", sqrt(n, p));
     }
-
     // Time: O(log(n))
     static double sqrt(int n, int p) {
         int start = 0;
