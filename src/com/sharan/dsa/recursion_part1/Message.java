@@ -1,4 +1,4 @@
-package com.sharan.dsa.recursion;
+package com.sharan.dsa.recursion_part1;
 
 public class Message {
     public static void main(String[] args) {

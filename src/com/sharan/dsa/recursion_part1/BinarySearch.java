@@ -1,4 +1,4 @@
-package com.sharan.dsa.recursion;
+package com.sharan.dsa.recursion_part1;
 
 public class BinarySearch {
     public static void main(String[] args) {
