@@ -52,11 +52,53 @@ public class Recursion {
         }
     }
 
-    public static void main(String[] args) {
-        recursiveMethod(5);
+    /**
+     * recursive vs iterative
+     * @param num
+     */
+    static int powerOfTwo(int num) {
+        int power;
+        if (num == 0) {
+            return 1;
+        } else {
+            power = 2 * powerOfTwo(num - 1);
+            return power;
+        }
     }
 
-    /**
-     *
-     */
+    static int powerOfTwoIT(int num) {
+        int i = 0;
+        int power = 1;
+        while (i < num) {
+            power = power * 2;
+            i++;
+        }
+        return power;
+    }
+
+    static int factorial(int num) {
+        if (num < 1) {
+            return -1;
+        }
+        if (num == 0 || num == 1) {
+            return 1;
+        } else {
+            return num * factorial(num - 1);
+        }
+    }
+
+    static int fibonacci(int num) {
+        if (num < 0) {
+            return -1;
+        }
+        if (num == 1 || num == 0) {
+            return num;
+        } else {
+            return fibonacci(num - 1) + fibonacci(num - 2);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fibonacci(6));
+    }
 }
