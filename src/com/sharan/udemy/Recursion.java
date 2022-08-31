@@ -171,6 +171,23 @@ public class Recursion {
         return num % 2 + 10 * decimalToBinary(num / 2);
     }
 
+    public static int findMaxNumRec(int[] arr, int n) {
+        // base condition
+        if (n == 1) {
+            return arr[0];
+        }
+        // recursive part
+        return Math.max(arr[n-1], findMaxNumRec(arr, n-1));
+    }
+
+    public static int productOfArray(int[] arr, int n) {
+        if (n <= 0) {
+            return 1;
+        }
+        // recursive part
+        return (productOfArray(arr, n - 1) * arr[n - 1]);
+    }
+
     public static void main(String[] args) {
         System.out.println(decimalToBinary(12));
     }
