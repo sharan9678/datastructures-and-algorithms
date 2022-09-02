@@ -181,6 +181,7 @@ public class Recursion {
     }
 
     public static int productOfArray(int[] arr, int n) {
+        // base condition
         if (n <= 0) {
             return 1;
         }
