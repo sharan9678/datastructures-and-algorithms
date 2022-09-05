@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class BigONotation {
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5};
-//        sumAndProductOfArray(array);
-//        printPairs(array);
-//        printUnorderedPair(array);
-//        reverseAnArray(array);
+        sumAndProductOfArray(array);
+        printPairs(array);
+        printUnorderedPair(array);
+        reverseAnArray(array);
         reverseAnArrayUsingRecursion(array, 0, 4);
         System.out.println(Arrays.toString(array));
         System.out.println(factorial(6));
