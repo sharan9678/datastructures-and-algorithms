@@ -50,14 +50,14 @@ public class BigONotation {
      }
 
      public static void printUnorderedPair(int[] arrayA, int[] arrayB) {
-        for (int i = 0; i < arrayA.length; i++) {               // not n^2 coz two for loop is taking two different arrays
-            for (int j = 0; j < arrayB.length; j++) {           // O(ab)
-                if (arrayA[i] < arrayB[j]) {
-                    System.out.print(arrayA[i] + "" + arrayB[j]);
-                }
-            }
-            System.out.println();
-        }
+         for (int j : arrayA) {               // not n^2 coz two for loop is taking two different arrays
+             for (int k : arrayB) {           // O(ab)
+                 if (j < k) {
+                     System.out.print(j + "" + k);
+                 }
+             }
+             System.out.println();
+         }
         // time complexity: O(ab)
          // a --> O(a)
          // b --> O(b)
@@ -89,5 +89,19 @@ public class BigONotation {
         if (n == 0)
             return 1;
         return n * factorial(n-1);
+     }
+
+     public static int powersOf2(int n) {
+        if (n < 1) {
+            return 0;
+        } else if (n == 1) {
+            System.out.println(1);
+            return 1;
+        } else {
+            int prev = powersOf2(n / 2);
+            int curr = prev * 2;
+            System.out.println(curr);
+            return curr;
+        }
      }
 }
