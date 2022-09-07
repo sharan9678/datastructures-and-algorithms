@@ -1,0 +1,46 @@
+package com.sharan.udemy.array;
+
+import java.util.Arrays;
+
+public class SingleDimensionalArray {
+    private int[] arr = null;
+
+    public SingleDimensionalArray(int sizeOfArray) {
+        arr = new int[sizeOfArray];
+        for (int i = 0; i < sizeOfArray; i++) {
+            arr[i] = Integer.MIN_VALUE;
+        }
+    }
+
+    public void insert(int location, int value) {
+        try {
+            if (arr[location] == Integer.MIN_VALUE) {
+                arr[location] = value;
+                System.out.println("successfully inserted!");
+            } else {
+                System.out.println("this cell is already occupied");
+            }
+        } catch (ArrayIndexOutOfBoundsException exception) {
+            System.out.println("Invalid index to be accessed array!");
+        }
+        // tc: O(1)
+    }
+
+    public void display(int location) {
+        System.out.println(arr[location]);
+        // tc: O(1)
+    }
+
+    public void traverse() {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != Integer.MIN_VALUE) {
+                System.out.println("Array at index " + i +
+                        " is : " + arr[i]);
+            }
+        }
+    }
+
+    public void display() {
+        System.out.println(Arrays.toString(arr));
+    }
+}
