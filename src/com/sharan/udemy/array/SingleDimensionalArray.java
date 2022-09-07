@@ -40,6 +40,31 @@ public class SingleDimensionalArray {
         }
     }
 
+    // search in array
+    // linear search
+    public void search(int value) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == value) {
+                System.out.println("value found at index: " + i);
+            } else {
+                System.out.println("no such value");
+            }
+        }
+        // tc: O(N)
+    }
+
+    // delete value from an array
+    public void delete(int index) {
+        try {
+            if (arr[index] != Integer.MIN_VALUE) {
+                arr[index] = Integer.MIN_VALUE;
+                System.out.println("successfully deleted!");
+            }
+        } catch (ArrayIndexOutOfBoundsException exception) {
+            System.out.println("invalid index to access array");
+        }
+    }
+
     public void display() {
         System.out.println(Arrays.toString(arr));
     }
