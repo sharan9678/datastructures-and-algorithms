@@ -1,0 +1,13 @@
+package com.sharan.udemy.circularDoublyLinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        CircularDoublyLinkedList cdll = new CircularDoublyLinkedList();
+        cdll.createCDLL(1);
+        cdll.insertNode(2, 0);
+        cdll.insertNode(3, 1);
+        cdll.insertNode(4, 6);
+        cdll.traverseCDLL();
+        cdll.reverseTraversal();
+    }
+}
